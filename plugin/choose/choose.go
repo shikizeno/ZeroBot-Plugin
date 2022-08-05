@@ -18,7 +18,7 @@ func init() {
 		Help: "choose\n" +
 			"- 可口还是百事\n" +
 			"- KFC还是华莱士\n" +
-			"- 星星还是陈陈\n" +
+			"- 星星还是陈陈\n",
 	})
 	engine.OnPrefix("选择").SetBlock(true).Handle(handle)
 }
