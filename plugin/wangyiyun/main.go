@@ -20,8 +20,8 @@ const (
 func init() {
 	control.Register("wangyiyun", &ctrl.Options[*zero.Ctx]{
 		DisableOnDefault: false,
-		Help:             "wangyiyun \n- 来份网易云热评",
-	}).OnFullMatch("来份网易云热评").SetBlock(true).Limit(ctxext.LimitByUser).
+		Help:             "wangyiyun \n- 来点网易云骚话",
+	}).OnFullMatch("来点网易云骚话").SetBlock(true).Limit(ctxext.LimitByUser).
 		Handle(func(ctx *zero.Ctx) {
 			data, err := web.RequestDataWith(web.NewDefaultClient(), wangyiyunURL, "GET", wangyiyunReferer, ua)
 			if err != nil {
