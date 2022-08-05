@@ -20,8 +20,8 @@ func init() { // 插件主体
 	control.Register("aiwife", &ctrl.Options[*zero.Ctx]{
 		DisableOnDefault: false,
 		Help: "AIWife\n" +
-			"- waifu | 随机waifu",
-	}).ApplySingle(ctxext.DefaultSingle).OnFullMatchGroup([]string{"waifu", "随机waifu"}).SetBlock(true).
+			"- waifu | 随机老婆",
+	}).ApplySingle(ctxext.DefaultSingle).OnFullMatchGroup([]string{"waifu", "随机老婆"}).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
 			miku := rand.Intn(100000) + 1
 			ctx.SendChain(message.At(ctx.Event.UserID), message.Image(fmt.Sprintf(bed, miku)))
