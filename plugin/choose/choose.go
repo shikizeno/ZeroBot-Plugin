@@ -16,8 +16,9 @@ func init() {
 	engine := control.Register("choose", &ctrl.Options[*zero.Ctx]{
 		DisableOnDefault: false,
 		Help: "choose\n" +
-			"- 选择可口可乐还是百事可乐\n" +
-			"- 选择肯德基还是麦当劳还是必胜客",
+			"- 可口还是百事\n" +
+			"- KFC还是华莱士\n" +
+			"- 星星还是陈陈\n" +
 	})
 	engine.OnPrefix("选择").SetBlock(true).Handle(handle)
 }
